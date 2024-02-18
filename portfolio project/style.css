@@ -1,0 +1,203 @@
+@import url(https://db.onlinewebfonts.com/c/65e1ae41ad95e8bed2ac45adc765795a?family=Gang+of+Three+V2+V2);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Gang of Three V2 V2";
+  text-transform: uppercase;
+}
+.home {
+  background: red;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  position: relative;
+}
+.svg-wrapper polygon {
+  /* box-shadow: 15px 15px 20px green; */
+  filter: drop-shadow(0 0 10px red);
+  /* animation: animate 2s ease-out; */
+  animation: animate 5s linear infinite;
+}
+.svg-wrapper {
+  transform: rotate(45deg) scale(2);
+}
+@keyframes animate {
+  0% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+.menu-wrapper {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.menu-wrapper a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  margin-left: 30px;
+  font-size: 36px;
+  color: red;
+  -webkit-text-stroke-width: 1.45px;
+  -webkit-text-stroke-color: black;
+}
+.menu-wrapper .active,
+.menu-wrapper a:hover {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px red, 0 0 40px red,
+      0 0 50px red, 0 0 60px red, 0 0 70px red;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ee3131, 0 0 40px #ee3131,
+      0 0 50px #ee3131, 0 0 60px #ee3131, 0 0 70px #ee3131, 0 0 80px #ee3131;
+  }
+}
+.about {
+  position: absolute;
+
+  left: 10%;
+  width: 80%;
+  top: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+.about .about-txt {
+  display: block;
+  color: white;
+}
+.about .about-txt h1 {
+  font-size: 55px;
+}
+.about-img {
+  display: block;
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.img-container::before {
+  content: "";
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  top: -100px;
+  left: -100px;
+
+  background: conic-gradient(red 20deg, transparent 120deg);
+  animation: rotate 2s linear infinite;
+  z-index: -1;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.img-container img {
+  z-index: 3;
+
+  height: 300px;
+  padding: 20px;
+}
+.about-txt a {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+
+  font-size: 20px;
+}
+.about-txt a:hover {
+  color: red;
+}
+.btn {
+  background: red;
+  padding: 20px 30px;
+  margin-right: 5px;
+  cursor: pointer;
+  /* transition: all 0.2s; */
+}
+.btn:hover {
+  color: red;
+  background: white;
+}
+.actual-about {
+  /* visibility: hidden; */
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  top: 25%;
+}
+.actual-about .about-me {
+  color: white;
+}
+.actual-about .about-me :where(p, ul li, ul li a) {
+  font-size: 20px;
+  text-decoration: none;
+}
+.actual-about .about-me ul li a {
+  color: red;
+}
+.portfolio {
+  /* visibility: hidden; */
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: red;
+  left: 10%;
+  width: 80%;
+  top: 25%;
+}
+.portfolio.project {
+  display: inline-block;
+  width: 500px;
+}
+.portfolio img {
+  display: inline-block;
+  width: 350px;
+}
+.more-pr a {
+  text-decoration: none;
+  color: white;
+}
+.connect {
+  /* visibility: hidden; */
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  left: 10%;
+  width: 80%;
+  top: 25%;
+}
+.connect p {
+  font-size: 30px;
+  color: white;
+}
+.connect p a {
+  text-decoration: none;
+  color: red;
+}
+.hidden {
+  visibility: hidden;
+}
