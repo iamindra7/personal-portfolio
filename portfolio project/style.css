@@ -1,4 +1,8 @@
 @import url(https://db.onlinewebfonts.com/c/65e1ae41ad95e8bed2ac45adc765795a?family=Gang+of+Three+V2+V2);
+:root {
+  --primary-color: red;
+  --secondary-color: #ee3131;
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +13,7 @@ body {
   text-transform: uppercase;
 }
 .home {
-  background: red;
+  background: var(--primary-color);
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -18,7 +22,7 @@ body {
 }
 .svg-wrapper polygon {
   /* box-shadow: 15px 15px 20px green; */
-  filter: drop-shadow(0 0 10px red);
+  filter: drop-shadow(0 0 10px var(--primary-color));
   /* animation: animate 2s ease-out; */
   animation: animate 5s linear infinite;
 }
@@ -49,7 +53,7 @@ body {
   color: black;
   margin-left: 30px;
   font-size: 36px;
-  color: red;
+  color: var(--primary-color);
   -webkit-text-stroke-width: 1.45px;
   -webkit-text-stroke-color: black;
 }
@@ -61,13 +65,57 @@ body {
 }
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px red, 0 0 40px red,
-      0 0 50px red, 0 0 60px red, 0 0 70px red;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--primary-color),
+      0 0 40px var(--primary-color), 0 0 50px var(--primary-color),
+      0 0 60px var(--primary-color), 0 0 70px var(--primary-color);
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ee3131, 0 0 40px #ee3131,
-      0 0 50px #ee3131, 0 0 60px #ee3131, 0 0 70px #ee3131, 0 0 80px #ee3131;
+    text-shadow: 0 0 20px #fff, 0 0 30px var(--seconadry-color),
+      0 0 40px var(--seconadry-color), 0 0 50px var(--seconadry-color),
+      0 0 60px var(--seconadry-color), 0 0 70px var(--seconadry-color),
+      0 0 80px var(--seconadry-color);
   }
+}
+.theme-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  top: 25%;
+  width: 8%;
+  height: 35%;
+}
+.theme-wrapper div {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.theme-wrapper .red {
+  background: red;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+.theme-wrapper .green {
+  background: green;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+.theme-wrapper .yellow {
+  background: yellow;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+.theme-wrapper .pink {
+  background: pink;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+.theme-wrapper .purple {
+  background: purple;
+  border: 2px solid black;
+  border-radius: 2px;
 }
 .about {
   position: absolute;
@@ -101,7 +149,7 @@ body {
   top: -100px;
   left: -100px;
 
-  background: conic-gradient(red 20deg, transparent 120deg);
+  background: conic-gradient(var(--primary-color) 20deg, transparent 120deg);
   animation: rotate 2s linear infinite;
   z-index: -1;
 }
@@ -127,17 +175,17 @@ body {
   font-size: 20px;
 }
 .about-txt a:hover {
-  color: red;
+  color: var(--primary-color);
 }
 .btn {
-  background: red;
+  background: var(--primary-color);
   padding: 20px 30px;
   margin-right: 5px;
   cursor: pointer;
   /* transition: all 0.2s; */
 }
 .btn:hover {
-  color: red;
+  color: var(--primary-color);
   background: white;
 }
 .actual-about {
@@ -155,7 +203,7 @@ body {
   text-decoration: none;
 }
 .actual-about .about-me ul li a {
-  color: red;
+  color: var(--primary-color);
 }
 .portfolio {
   /* visibility: hidden; */
@@ -164,7 +212,7 @@ body {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  color: red;
+  color: var(--primary-color);
   left: 10%;
   width: 80%;
   top: 25%;
@@ -196,7 +244,7 @@ body {
 }
 .connect p a {
   text-decoration: none;
-  color: red;
+  color: var(--primary-color);
 }
 .hidden {
   visibility: hidden;
